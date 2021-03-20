@@ -160,13 +160,45 @@ public class testdemo {
 	    int Sal =1000;
 	    int Tax=20;
 	    int	TaxRelief;
+	  
 	    
-	    if (Age >18 && Gender == "Male") {
+	    
+	    if (Age <=18 && Gender == "Male") {
 	    	
-	    	TaxRelief = (int) (((Sal-Tax) * 0.8 ) + 0);	
+	    	TaxRelief = (int) (((Sal-Tax) * 1 ) + 0);	
 	    	System.out.println("Tax Relief is " +TaxRelief);
 	    	
-	    }
+	    }else if (Age >18 && Age <=35 && Gender == "Male")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.8 ) + 0);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    }else if (Age >35 && Age <=50 && Gender == "Male")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.5 ) + 0);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    } if (Age >50 && Age <=35 && Gender == "Male")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.367 ) + 0);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    }else if ( Age >=76 && Gender == "Male")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.05 ) + 0);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    }else if (Age <=18 && Gender == "Female") {
+	    	
+	    	TaxRelief = (int) (((Sal-Tax) * 1 ) + 500);	
+	    	System.out.println("Tax Relief is " +TaxRelief);
+	    	
+	    }else if (Age >18 && Age <=35 && Gender == "Female")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.8 ) + 500);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    }else if (Age >35 && Age <=50 && Gender == "Female")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.5 ) + 500);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    }else if (Age >50 && Age <=35 && Gender == "Female")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.367 ) + 500);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    }else if ( Age >=76 && Gender == "Female")
+	    {TaxRelief = (int) (((Sal-Tax) * 0.05 ) + 500);
+	    System.out.println("Tax Relief is " +TaxRelief);
+	    
+	    
 	    
 	 }
 
