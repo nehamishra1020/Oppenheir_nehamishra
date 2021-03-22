@@ -38,13 +38,13 @@ public class testdemo {
 	
 	private  static  final  String  BASE_URL  =  "localhost:8080";
 	String birthday = "10031990";
-	String gender = "Male";
+	String gender = "M";
 	String name = "ABC";
 	String natid = "India";
 	String salary = "1000";
 	String tax = "20";
 	String birthday2 = "10031980";
-	String gender2 = "Male";
+	String gender2 = "M";
 	String name2 = "XYZ";
 	String natid2 = "Ind23";
 	String salary2 = "5000";
@@ -88,10 +88,10 @@ public class testdemo {
 	 
 	
 	 
-	@Then("^response contains IsLogin equals \"([^\"]*)\"$")
-	    public void response_contains_IsPosted_equals_(String message) {
-		    Assert.assertEquals(message, getJsonPath(response, "IsPosted"));
-	    }	
+	//@Then("^response contains IsLogin equals \"([^\"]*)\"$")
+	   // public void response_contains_IsPosted_equals_(String message) {
+		 //   Assert.assertEquals(message, getJsonPath(response, "IsPosted"));
+	   // }	
 
 	 
 	 public String getJsonPath(Response response, String key) {
@@ -156,45 +156,45 @@ public class testdemo {
 	 @Given("^Calculation of Tax Relief based on formulae$")
 	 public void calculation_of_Tax_Relief_based_on_formulae() throws Throwable {
 	    int Age =20;
-	    String Gender= "Male";
+	    String Gender= "M";
 	    int Sal =1000;
 	    int Tax=20;
 	    int	TaxRelief;
 	  
 	    
 	    
-	    if (Age <=18 && Gender == "Male") {
+	    if (Age <=18 && Gender == "M") {
 	    	
 	    	TaxRelief = (int) (((Sal-Tax) * 1 ) + 0);	
 	    	System.out.println("Tax Relief is " +TaxRelief);
 	    	
-	    }else if (Age >18 && Age <=35 && Gender == "Male")
+	    }else if (Age >18 && Age <=35 && Gender == "M")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.8 ) + 0);
 	    System.out.println("Tax Relief is " +TaxRelief);
-	    }else if (Age >35 && Age <=50 && Gender == "Male")
+	    }else if (Age >35 && Age <=50 && Gender == "M")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.5 ) + 0);
 	    System.out.println("Tax Relief is " +TaxRelief);
-	    } if (Age >50 && Age <=35 && Gender == "Male")
+	    } if (Age >50 && Age <=35 && Gender == "M")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.367 ) + 0);
 	    System.out.println("Tax Relief is " +TaxRelief);
-	    }else if ( Age >=76 && Gender == "Male")
+	    }else if ( Age >=76 && Gender == "M")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.05 ) + 0);
 	    System.out.println("Tax Relief is " +TaxRelief);
-	    }else if (Age <=18 && Gender == "Female") {
+	    }else if (Age <=18 && Gender == "F") {
 	    	
 	    	TaxRelief = (int) (((Sal-Tax) * 1 ) + 500);	
 	    	System.out.println("Tax Relief is " +TaxRelief);
 	    	
-	    }else if (Age >18 && Age <=35 && Gender == "Female")
+	    }else if (Age >18 && Age <=35 && Gender == "F")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.8 ) + 500);
 	    System.out.println("Tax Relief is " +TaxRelief);
-	    }else if (Age >35 && Age <=50 && Gender == "Female")
+	    }else if (Age >35 && Age <=50 && Gender == "F")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.5 ) + 500);
 	    System.out.println("Tax Relief is " +TaxRelief);
-	    }else if (Age >50 && Age <=35 && Gender == "Female")
+	    }else if (Age >50 && Age <=35 && Gender == "F")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.367 ) + 500);
 	    System.out.println("Tax Relief is " +TaxRelief);
-	    }else if ( Age >=76 && Gender == "Female")
+	    }else if ( Age >=76 && Gender == "F")
 	    {TaxRelief = (int) (((Sal-Tax) * 0.05 ) + 500);
 	    System.out.println("Tax Relief is " +TaxRelief);
 	    
